@@ -30,17 +30,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.testdraw.ui.characters.CharactersScreen
+import com.example.testdraw.ui.navigation.NarutoNavGraph
 import com.example.testdraw.ui.theme.PurpleGrey80
 import com.example.testdraw.ui.theme.TestDrawTheme
 
 @Composable
 fun MainAppView() {
-    NavHost (
-        navController = rememberNavController(),
-        startDestination = "characters",
-    ){
-        composable("characters") {
-            CharactersScreen()
-        }
-    }
+    NarutoNavGraph()
 }
