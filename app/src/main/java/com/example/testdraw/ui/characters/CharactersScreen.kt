@@ -60,7 +60,6 @@ fun CharactersScreen(
     navigateHome: () -> Unit,
     navigateNext: (Int) -> Unit,
     navigatePrev: (Int) -> Unit,
-    modifier: Modifier = Modifier,
     viewModel: CharactersScreenViewModel = viewModel(factory = AppViewModelProvider.Factory),
 ) {
     val uiState by viewModel.homeUiState.collectAsState()
@@ -135,7 +134,9 @@ fun CharacterList(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CharacterCard(character: Character, modifier: Modifier = Modifier) {
+fun CharacterCard(
+    character: Character, modifier:
+    Modifier = Modifier) {
     ElevatedCard(
         onClick = { /*TODO*/ },
         modifier = modifier
